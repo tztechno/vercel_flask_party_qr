@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QRコード結果</title>
+    <style>
+        body {
+            margin-left: 50px;
+            /* 左側に20pxのマージンを追加 */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>新年祝賀会参加証</h2>
+    <br>
+    <h2>氏名: {{ name }}</h2>
+    <h2>所属: {{ affiliation }}</h2>
+    <h2>ID: {{ assigned_id }}</h2>
+    <br>
+    <img src="data:image/png;base64,{{ qr_code_data }}" alt="QRコード">
+    <br><br>
+    <p>本証を印刷または画面表示して、受付に提示してください。</p>
+</body>
+
+</html>

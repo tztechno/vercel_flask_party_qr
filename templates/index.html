@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QRコード生成フォーム</title>
+
+    <style>
+        body {
+            margin-left: 50px;
+            /* 左側に20pxのマージンを追加 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>新年祝賀会参加証</h1>
+
+    <p>氏名あるいはID番号を入力してQRコード生成ボタンを押してください。</p>
+    
+    <form action="{{ url_for('submit') }}" method="POST">
+        <label for="name">氏名:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id"><br>
+
+        <input type="submit" value="QRコードを生成">
+    </form>
+
+    <p>受付時は、参加証を印刷あるいは画面表示した上で、提示してください。</p>
+</body>
+
+</html>
